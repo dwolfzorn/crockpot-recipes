@@ -1,0 +1,13 @@
+{
+  "name": "crockpot-recipes",
+  "private": true,
+  "description": "Tests for the recipe site. The site itself has no npm dependencies.",
+  "scripts": {
+    "test": "python -m unittest discover -s tests && node --test \"tests/**/*.test.js\"",
+    "test:build": "python -m unittest discover -s tests -v",
+    "test:ui": "node --test \"tests/**/*.test.js\""
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.3"
+  }
+}

@@ -28,6 +28,9 @@ src/
   template.html       page markup
   styles.css          page styles
   app.js              search, filters and recipe view
+tests/
+  test_build.py       tests for the build steps (Python)
+  ui.test.js          tests for the site itself, run in a simulated browser (Node + jsdom)
 build/
   build.py            runs the whole pipeline
   extract.py          1. PDF -> data/raw.json
@@ -48,6 +51,22 @@ python build/build.py --extract    # also re-read the PDF first (see below)
 Run the build after any change to `src/`, `data/overrides.json` or the tag rules, then commit `index.html` along with your change.
 
 `--extract` needs the original PDF, named `Stealth Health Slow Cooker Cookbook.pdf`, in the repo root, plus `pip install -r requirements.txt`. The PDF is git-ignored on purpose. Without it, the build just uses `data/raw.json`.
+
+## Testing
+
+**All tests must pass before any change is merged.** When you add or change functionality, add tests to the suite that cover it, in the same change. A feature isn't done until it has tests.
+
+The tests also need Node.js 20+. Install the test dependencies once with `npm install`, then:
+
+```sh
+python build/build.py   # the page tests run against the built index.html, so rebuild first
+npm test                # runs every test
+npm run test:build      # only the build tests (Python, no npm install needed)
+npm run test:ui         # only the page tests
+```
+
+- `tests/test_build.py` covers title cleanup, protein and Rice/Pasta tagging, overrides (including the error messages), every rule in `check.py`, and how `index.html` is bundled. It also fails if the committed `recipes.json` or `index.html` don't match what the build produces, so you can't forget to rebuild.
+- `tests/ui.test.js` loads `index.html` and tests what a visitor can do: search, filters, sorting, saved list state, the recipe page (check-offs, copy link, back/Escape), favorites (from the JSON and saved in the browser, starring from the list and the recipe page, the Favorites filter) and the print styles.
 
 ## Fixing a recipe
 
