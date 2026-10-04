@@ -1,3 +1,18 @@
 {
-  "_comment": "Manual corrections applied on top of data/raw.json. Keys are recipe ids; values map a field path to its new value, e.g. \"ingredients[0].items[2]\" or \"servings\". See README.md."
+  "_comment": "Manual corrections applied on top of data/raw.json. Keys are recipe ids; values map a field path to its new value, e.g. \"ingredients[0].items[2]\" or \"servings\". See README.md.",
+  "chili-garlic-chicken-fried-rice": {
+    "favorite": true
+  },
+  "honey-chipotle-chicken-burrito-bowls": {
+    "favorite": true
+  },
+  "honey-harissa-chicken-rice-bowls": {
+    "favorite": true
+  },
+  "chimichurri-steak": {
+    "favorite": true
+  },
+  "pepper-steak": {
+    "favorite": true
+  }
 }

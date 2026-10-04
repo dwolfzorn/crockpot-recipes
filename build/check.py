@@ -41,6 +41,8 @@ def main():
             err(r, "empty title")
         if r["protein"] not in ("chicken", "beef", "pork"):
             err(r, f"no protein tag ({r['protein']!r})")
+        if not isinstance(r["favorite"], bool):
+            err(r, f"favorite must be true or false, got {r['favorite']!r}")
         if not r["ingredients"]:
             err(r, "no ingredients")
         for g in r["ingredients"]:

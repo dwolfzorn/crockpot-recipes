@@ -1,7 +1,7 @@
 """Step 2: data/raw.json + data/overrides.json -> recipes.json.
 
 Tidies titles, applies manual corrections from overrides.json, and derives the
-filter fields (protein, rice/pasta tags). Fields set by an override are never re-derived.
+filter fields (protein, rice/pasta tags). "favorite" defaults to false. Fields set by an override are never re-derived.
 
 Usage: python build/enrich.py
 """
@@ -24,7 +24,7 @@ TAG_RULES = [
     ("Pasta", r"pasta|noodle|macaroni|orzo|rigatoni|penne|farfalle|lasagna|spaghetti"),
 ]
 # Field order in recipes.json.
-FIELDS = ["id", "title", "section", "protein", "tags", "page", "servings", "nutrition",
+FIELDS = ["id", "title", "section", "protein", "tags", "favorite", "page", "servings", "nutrition",
           "ingredients", "instructions", "notes"]
 
 
@@ -105,6 +105,7 @@ def main():
         r["title"] = tidy_title(r["title"])
         r.setdefault("protein", None)    # derived below, but must exist so overrides can set them
         r.setdefault("tags", [])
+        r.setdefault("favorite", False)  # only ever set by overrides; visitors can also star locally
     touched = apply_overrides(recipes, overrides)
     for r in recipes:
         done = touched.get(r["id"], set())

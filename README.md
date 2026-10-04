@@ -11,6 +11,7 @@ The whole site is one self-contained file, [`index.html`](index.html). It works 
 - Search across titles, ingredients and instructions (e.g. `brisket`, `cottage cheese`, `orzo`)
 - Filter by section (Meals / Proteins), protein (Chicken / Pork / Beef) and base (Rice / Pasta)
 - Sort by book order, A–Z, calories, protein, or protein per calorie
+- Star favorites from the recipe list or a recipe page, and show only favorites with the **★ Favorites** filter
 - Check off ingredients and steps while cooking
 - Link to a recipe (`index.html#/japanese-curry`) or a search (`index.html?q=orzo`)
 - Works on phones, follows dark mode, and prints cleanly
@@ -66,6 +67,7 @@ Don't edit `recipes.json` or `index.html` directly: the next build overwrites th
 
 - Paths use the field names in `recipes.json`, with `[n]` for list positions counted from 0: `title`, `servings`, `nutrition.calories`, `ingredients[0].name`, `ingredients[0].items[3]`, `instructions[2].text`, `notes[0]`.
 - Setting `protein` or `tags` replaces the automatic value for that recipe.
+- `"favorite": true` stars a recipe for everyone by default. Visitors can still star or unstar any recipe; those changes are saved in their own browser (`localStorage`) and take precedence over the default.
 - A path or recipe id that doesn't exist stops the build with an error, so typos can't fail silently.
 
 ## Changing tags

@@ -14,7 +14,30 @@
     r._all = r._title + " " + r._ing + " " + norm(r.instructions.map((s) => s.text).join(" ") + " " + r.notes.join(" "));
   }
 
-  const state = { q: "", section: "All", protein: "All", tag: "All", sort: "book" };
+  // Favorites: recipes.json sets the defaults; each browser keeps its own changes in localStorage
+  // as {id: true|false}, storing only entries that differ from the default.
+  const FAV_KEY = "cookbook-favorites";
+  let favLocal = {};
+  try { favLocal = JSON.parse(localStorage.getItem(FAV_KEY) || "{}") || {}; } catch (e) {}
+  const isFav = (r) => r.id in favLocal ? favLocal[r.id] : !!r.favorite;
+  function toggleFav(r) {
+    const next = !isFav(r);
+    if (next === !!r.favorite) delete favLocal[r.id]; else favLocal[r.id] = next;
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(favLocal)); } catch (e) {}
+    return next;
+  }
+  const favButton = (r, cls) => {
+    const on = isFav(r);
+    return `<button class="${cls}" data-fav="${esc(r.id)}" aria-pressed="${on}" aria-label="${on ? "Remove from" : "Add to"} favorites" title="${on ? "Remove from" : "Add to"} favorites">${on ? "★" : "☆"}</button>`;
+  };
+  const syncFavButton = (btn, on) => {
+    btn.setAttribute("aria-pressed", on);
+    btn.setAttribute("aria-label", (on ? "Remove from" : "Add to") + " favorites");
+    btn.title = btn.getAttribute("aria-label");
+    btn.firstChild.textContent = on ? "★" : "☆";
+  };
+
+  const state = { q: "", section: "All", protein: "All", tag: "All", sort: "book", favOnly: false };
   try { Object.assign(state, JSON.parse(sessionStorage.getItem("cookbook-state") || "{}")); } catch (e) {}
   const urlQ = new URLSearchParams(location.search).get("q");  // shareable searches: page.html?q=brisket
   if (urlQ !== null) state.q = urlQ;
@@ -61,6 +84,7 @@
       (state.section === "All" || r.section === state.section) &&
       (state.protein === "All" || r.protein === state.protein.toLowerCase()) &&
       (state.tag === "All" || r.tags.includes(state.tag)) &&
+      (!state.favOnly || isFav(r)) &&
       terms.every((t) => r._all.includes(t)));
     const score = (r) => terms.reduce((s, t) => s + (r._title.includes(t) ? 2 : r._ing.includes(t) ? 1 : 0), 0);
     const per = (r) => r.nutrition.per === "batch" ? null : r.nutrition; // batch macros sort last
@@ -83,14 +107,16 @@
       const matchIng = terms.length && !terms.every((t) => r._title.includes(t))
         ? r.ingredients.flatMap((g) => g.items).filter((i) => terms.some((t) => norm(i).includes(t))).slice(0, 2)
         : [];
-      return `<a class="card" href="#/${r.id}">
+      return `<div class="card-wrap">${favButton(r, "fav card-fav")}<a class="card" href="#/${r.id}">
         <h3>${highlight(r.title, terms)}</h3>
         <div class="meta">${badges(r)}<span class="tag">p. ${r.page}</span></div>
         ${matchIng.length ? `<div class="per">${matchIng.map((i) => highlight(i, terms)).join(" · ")}</div>` : ""}
         <div class="macros">${macroGrid(r.nutrition)}</div>
         <div class="per">${servingsText(r)}</div>
-      </a>`;
-    }).join("") : `<div class="empty">No recipes match “${esc(state.q)}”.</div>`;
+      </a></div>`;
+    }).join("") : `<div class="empty">${state.favOnly && !RECIPES.some(isFav)
+      ? "No favorites yet. Tap the ☆ on a recipe to add it."
+      : state.q ? `No recipes match “${esc(state.q)}”.` : "No recipes match these filters."}</div>`;
   }
 
   function stepHtml(step) {
@@ -113,7 +139,7 @@
     const d = $("detail");
     d.innerHTML = `
       <button class="back" id="back">← All recipes</button>
-      <div class="titlerow"><h2>${esc(r.title)}</h2></div>
+      <div class="titlerow"><h2>${esc(r.title)}</h2>${favButton(r, "fav detail-fav")}</div>
       <div class="meta">${badges(r)}<span class="tag">Book page ${r.page}</span>
         <div class="tools"><button class="tool" id="reset">Clear checks</button><button class="tool" id="copy">Copy link</button></div></div>
       <div class="band">
@@ -141,6 +167,7 @@
       li.classList.toggle("done", cb.checked);
     }));
     d.querySelectorAll(".steps li").forEach((li) => li.addEventListener("click", () => li.classList.toggle("done")));
+    d.querySelector(".detail-fav").onclick = (e) => syncFavButton(e.currentTarget, toggleFav(r));
     $("back").onclick = () => { location.hash = ""; };
     $("reset").onclick = () => d.querySelectorAll(".done").forEach((el) => {
       el.classList.remove("done"); const cb = el.querySelector("input"); if (cb) cb.checked = false;
@@ -165,6 +192,7 @@
       window.scrollTo(0, 0);
     } else {
       $("detail").hidden = true; $("list").hidden = false; $("top").hidden = false;
+      renderList();  // favorites may have changed on the recipe page
       document.title = SITE_TITLE;
       window.scrollTo(0, listScroll);
     }
@@ -175,6 +203,15 @@
   let t;
   q.addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => { state.q = q.value; renderList(); }, 80); });
   $("clear").onclick = () => { q.value = ""; state.q = ""; renderList(); q.focus(); };
+  $("grid").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-fav]"); if (!btn) return;
+    const r = RECIPES.find((x) => x.id === btn.dataset.fav);
+    const on = toggleFav(r);
+    if (state.favOnly && !on) renderList(); else syncFavButton(btn, on);
+  });
+  const favOnly = $("favOnly");
+  favOnly.setAttribute("aria-pressed", state.favOnly);
+  favOnly.onclick = () => { state.favOnly = !state.favOnly; favOnly.setAttribute("aria-pressed", state.favOnly); renderList(); };
   $("sort").value = state.sort;
   $("sort").onchange = (e) => { state.sort = e.target.value; renderList(); };
   document.addEventListener("keydown", (e) => {

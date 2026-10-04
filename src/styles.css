@@ -107,7 +107,20 @@ header.top {
   transition: transform .12s ease, border-color .12s ease;
 }
 .card:hover { transform: translateY(-2px); border-color: var(--accent); }
-.card h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+.card h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; padding-right: 30px; }
+.card-wrap { position: relative; display: flex; }
+.card-wrap .card { flex: 1; }
+.card-wrap:hover .card { transform: translateY(-2px); border-color: var(--accent); }
+.fav {
+  border: 0; background: none; cursor: pointer; line-height: 1; color: var(--muted);
+  padding: 4px; border-radius: 8px;
+}
+.fav:hover { color: var(--accent); }
+.fav[aria-pressed="true"] { color: var(--carb); }
+.card-fav { position: absolute; top: 8px; right: 8px; z-index: 1; font-size: 1.4rem; transition: transform .12s ease; }
+.card-wrap:hover .card-fav { transform: translateY(-2px); }
+.detail-fav { font-size: 1.9rem; }
+.brand .fav-filter { margin-left: auto; align-self: center; }
 .meta { display: flex; gap: 6px; flex-wrap: wrap; font-size: .75rem; color: var(--muted); }
 .tag { background: var(--surface-2); border-radius: 6px; padding: 2px 7px; }
 .tag.base { background: var(--accent-soft); color: var(--accent); }
@@ -172,7 +185,7 @@ header.top {
 mark { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 1px; }
 
 @media print {
-  header.top, .back, .tools, .hint { display: none !important; }
+  header.top, .back, .tools, .hint, .fav { display: none !important; }
   body { background: #fff; color: #000; }
   .panel { box-shadow: none; border: 0; padding: 0; }
   .cols { grid-template-columns: 1fr 1.6fr; }

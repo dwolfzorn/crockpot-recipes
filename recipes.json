@@ -10,6 +10,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 22,
       "servings": 10,
       "nutrition": {
@@ -114,6 +115,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 23,
       "servings": 7,
       "nutrition": {
@@ -199,6 +201,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 24,
       "servings": 10,
       "nutrition": {
@@ -302,6 +305,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 25,
       "servings": 10,
       "nutrition": {
@@ -382,6 +386,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 26,
       "servings": 18,
       "nutrition": {
@@ -483,6 +488,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 27,
       "servings": 10,
       "nutrition": {
@@ -589,6 +595,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 28,
       "servings": 10,
       "nutrition": {
@@ -677,6 +684,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": true,
       "page": 29,
       "servings": 10,
       "nutrition": {
@@ -782,6 +790,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 30,
       "servings": 7,
       "nutrition": {
@@ -882,6 +891,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 31,
       "servings": 8,
       "nutrition": {
@@ -988,6 +998,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 32,
       "servings": 10,
       "nutrition": {
@@ -1077,6 +1088,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 33,
       "servings": 9,
       "nutrition": {
@@ -1167,6 +1179,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 34,
       "servings": 10,
       "nutrition": {
@@ -1246,6 +1259,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 35,
       "servings": 10,
       "nutrition": {
@@ -1336,6 +1350,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 36,
       "servings": 7,
       "nutrition": {
@@ -1451,6 +1466,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 37,
       "servings": 8,
       "nutrition": {
@@ -1549,6 +1565,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 38,
       "servings": 10,
       "nutrition": {
@@ -1643,6 +1660,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 39,
       "servings": 10,
       "nutrition": {
@@ -1745,6 +1763,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": true,
       "page": 40,
       "servings": 7,
       "nutrition": {
@@ -1833,6 +1852,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 41,
       "servings": 10,
       "nutrition": {
@@ -1931,6 +1951,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 42,
       "servings": 10,
       "nutrition": {
@@ -2033,6 +2054,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 43,
       "servings": 11,
       "nutrition": {
@@ -2139,6 +2161,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 44,
       "servings": 9,
       "nutrition": {
@@ -2243,6 +2266,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 45,
       "servings": 11,
       "nutrition": {
@@ -2337,6 +2361,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 46,
       "servings": 10,
       "nutrition": {
@@ -2435,6 +2460,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 47,
       "servings": 10,
       "nutrition": {
@@ -2537,6 +2563,7 @@
       "section": "Meals",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 48,
       "servings": 8,
       "nutrition": {
@@ -2628,6 +2655,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 49,
       "servings": 12,
       "nutrition": {
@@ -2733,6 +2761,7 @@
       "section": "Meals",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 50,
       "servings": 7,
       "nutrition": {
@@ -2831,6 +2860,7 @@
       "section": "Meals",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 51,
       "servings": 14,
       "nutrition": {
@@ -2913,6 +2943,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 52,
       "servings": 10,
       "nutrition": {
@@ -3014,6 +3045,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 53,
       "servings": 12,
       "nutrition": {
@@ -3096,6 +3128,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 54,
       "servings": 10,
       "nutrition": {
@@ -3198,6 +3231,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": true,
       "page": 55,
       "servings": 10,
       "nutrition": {
@@ -3300,6 +3334,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 56,
       "servings": 10,
       "nutrition": {
@@ -3386,6 +3421,7 @@
       "section": "Meals",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 57,
       "servings": 10,
       "nutrition": {
@@ -3479,6 +3515,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 58,
       "servings": 12,
       "nutrition": {
@@ -3581,6 +3618,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 59,
       "servings": 15,
       "nutrition": {
@@ -3691,6 +3729,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 60,
       "servings": 10,
       "nutrition": {
@@ -3779,6 +3818,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 61,
       "servings": 10,
       "nutrition": {
@@ -3876,6 +3916,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 62,
       "servings": 10,
       "nutrition": {
@@ -3966,6 +4007,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 63,
       "servings": 10,
       "nutrition": {
@@ -4083,6 +4125,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 64,
       "servings": 7,
       "nutrition": {
@@ -4172,6 +4215,7 @@
       "section": "Meals",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 65,
       "servings": 8,
       "nutrition": {
@@ -4252,6 +4296,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 66,
       "servings": 10,
       "nutrition": {
@@ -4335,6 +4380,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 67,
       "servings": 10,
       "nutrition": {
@@ -4426,6 +4472,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 68,
       "servings": 10,
       "nutrition": {
@@ -4524,6 +4571,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 69,
       "servings": 11,
       "nutrition": {
@@ -4625,6 +4673,7 @@
       "section": "Meals",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 70,
       "servings": 10,
       "nutrition": {
@@ -4704,6 +4753,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 71,
       "servings": 18,
       "nutrition": {
@@ -4837,6 +4887,7 @@
       "section": "Meals",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 72,
       "servings": 10,
       "nutrition": {
@@ -4905,6 +4956,7 @@
       "section": "Meals",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 73,
       "servings": 10,
       "nutrition": {
@@ -5022,6 +5074,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 74,
       "servings": 10,
       "nutrition": {
@@ -5114,6 +5167,7 @@
       "section": "Meals",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 75,
       "servings": 12,
       "nutrition": {
@@ -5212,6 +5266,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 76,
       "servings": 12,
       "nutrition": {
@@ -5309,6 +5364,7 @@
       "section": "Meals",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 77,
       "servings": 10,
       "nutrition": {
@@ -5434,6 +5490,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 78,
       "servings": 12,
       "nutrition": {
@@ -5546,6 +5603,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 79,
       "servings": 12,
       "nutrition": {
@@ -5642,6 +5700,7 @@
       "tags": [
         "Rice"
       ],
+      "favorite": false,
       "page": 80,
       "servings": 7,
       "nutrition": {
@@ -5738,6 +5797,7 @@
       "tags": [
         "Pasta"
       ],
+      "favorite": false,
       "page": 81,
       "servings": 12,
       "nutrition": {
@@ -5832,6 +5892,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 83,
       "servings": 10,
       "nutrition": {
@@ -5920,6 +5981,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 84,
       "servings": 16,
       "nutrition": {
@@ -5993,6 +6055,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 85,
       "servings": 16,
       "nutrition": {
@@ -6086,6 +6149,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 86,
       "servings": 12,
       "nutrition": {
@@ -6162,6 +6226,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 87,
       "servings": 16,
       "nutrition": {
@@ -6227,6 +6292,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": true,
       "page": 88,
       "servings": 12,
       "nutrition": {
@@ -6308,6 +6374,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 89,
       "servings": 10,
       "nutrition": {
@@ -6382,6 +6449,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 90,
       "servings": 8,
       "nutrition": {
@@ -6483,6 +6551,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 91,
       "servings": 12,
       "nutrition": {
@@ -6547,6 +6616,7 @@
       "section": "Proteins",
       "protein": "pork",
       "tags": [],
+      "favorite": false,
       "page": 92,
       "servings": 16,
       "nutrition": {
@@ -6624,6 +6694,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 93,
       "servings": 12,
       "nutrition": {
@@ -6711,6 +6782,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": true,
       "page": 94,
       "servings": 12,
       "nutrition": {
@@ -6772,6 +6844,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 95,
       "servings": 16,
       "nutrition": {
@@ -6843,6 +6916,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 96,
       "servings": 12,
       "nutrition": {
@@ -6918,6 +6992,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 97,
       "servings": 16,
       "nutrition": {
@@ -6982,6 +7057,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 98,
       "servings": 10,
       "nutrition": {
@@ -7057,6 +7133,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 99,
       "servings": 12,
       "nutrition": {
@@ -7105,6 +7182,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 100,
       "servings": 11,
       "nutrition": {
@@ -7159,6 +7237,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 101,
       "servings": 10,
       "nutrition": {
@@ -7226,6 +7305,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 102,
       "servings": 12,
       "nutrition": {
@@ -7301,6 +7381,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 103,
       "servings": 12,
       "nutrition": {
@@ -7370,6 +7451,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 104,
       "servings": null,
       "nutrition": {
@@ -7448,6 +7530,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 105,
       "servings": 12,
       "nutrition": {
@@ -7511,6 +7594,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 106,
       "servings": 16,
       "nutrition": {
@@ -7578,6 +7662,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 107,
       "servings": 12,
       "nutrition": {
@@ -7646,6 +7731,7 @@
       "section": "Proteins",
       "protein": "pork",
       "tags": [],
+      "favorite": false,
       "page": 108,
       "servings": 16,
       "nutrition": {
@@ -7712,6 +7798,7 @@
       "section": "Proteins",
       "protein": "beef",
       "tags": [],
+      "favorite": false,
       "page": 109,
       "servings": 16,
       "nutrition": {
@@ -7796,6 +7883,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 110,
       "servings": 12,
       "nutrition": {
@@ -7860,6 +7948,7 @@
       "section": "Proteins",
       "protein": "chicken",
       "tags": [],
+      "favorite": false,
       "page": 111,
       "servings": 12,
       "nutrition": {
