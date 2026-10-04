@@ -1,0 +1,5 @@
+# Source cookbook PDF: large and copyrighted, never commit it
+*.pdf
+
+__pycache__/
+*.pyc

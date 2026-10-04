@@ -1,0 +1,2 @@
+# Only needed to re-extract from the PDF (python build/build.py --extract)
+pymupdf

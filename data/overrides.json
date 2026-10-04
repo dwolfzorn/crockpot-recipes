@@ -1,0 +1,3 @@
+{
+  "_comment": "Manual corrections applied on top of data/raw.json. Keys are recipe ids; values map a field path to its new value, e.g. \"ingredients[0].items[2]\" or \"servings\". See README.md."
+}
